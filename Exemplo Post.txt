@@ -1,0 +1,47 @@
+-- Clientes:
+{
+	"nome": "Fulano de Tal",
+	"email": "fulano@email.com",
+	"cpf": "123456789",
+	"dataNascimento": "10-12-2018"
+}
+
+-- Endereços:
+{
+	"rua": "Rua 30",
+    "cidade": "Rio do Sul",
+    "estado": "SC",
+    "cep": "89160000",
+    "cliente": {
+    	"id": 2
+    }
+}
+
+-- Produtos:
+{
+	"nome": "REFRIGERANTE",
+    "descricao": "REFR COCA COLA 3 LTS",
+    "marca": "COCA COLA",
+    "valor": 9.49
+}
+
+-- Pedidos:
+{
+    "total": 152.30,
+    "dataCriacao": "21-12-2018",
+    "cliente": {
+        "id": 2
+    }
+}
+
+-- Itens:
+{
+	"quantidade": 50,
+    "total": 375.00,
+    "pedido": {
+      "numero": 25
+    },
+    "produto": {
+      "id": 1
+    }
+}

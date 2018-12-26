@@ -1,0 +1,49 @@
+http://password:secret@localhost:8081/oauth/token?grant_type=password&username=user&password=unidavi
+
+USER
+{
+    "access_token": "6368afc0-23f1-48da-9484-21c8eaca0b30",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "oauth2"
+}
+
+MANAGER
+{
+    "access_token": "b0e1507f-d41a-4e4e-9996-10bb8ae8fc17",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "oauth2"
+}
+
+ADMIN
+{
+    "access_token": "78871ed6-9983-41d5-9d67-6235b1c60b0b",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "oauth2"
+}
+
+http://credentials:secret@localhost:8081/oauth/token?grant_type=client_credentials
+
+{
+    "access_token": "a77c7a72-2a99-4008-97e1-68d2618f5aea",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "oauth2"
+}
+
+http://localhost:8081/oauth/authorize?response_type=code&client_id=auth-code&scope=oauth2&redirect_uri=http://callback
+
+http://callback/?code=ooUzL2
+
+http://auth-code:secret@localhost:8081/oauth/token?grant_type=authorization_code&code=ooUzL2&redirect_uri=http://callback
+
+{
+    "access_token": "45a69663-af2d-413f-87c6-4773c520978c",
+    "token_type": "bearer",
+    "expires_in": 43199,
+    "scope": "oauth2"
+}
+
+http://callback/#access_token=4a0058b3-4914-49e4-b6dc-0458ceec9f8a&token_type=bearer&expires_in=43199&scope=oauth2
